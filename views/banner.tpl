@@ -7,7 +7,7 @@
   <span class="w3-display-middle">
     <span class="w3-xxxlarge w3-margin"><b>Taskbook</b></span>
   </span>
-  <span class="w3-right">
+  <span class="w3-display-right">
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Sign up</span>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Log In</span>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Log Out</span>
