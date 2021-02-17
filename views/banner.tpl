@@ -5,7 +5,7 @@
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Today</span>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Calories</span>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Sign up</span>
-    <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Log In</span>
+    <span class="w3-large w3-button w3-margin w3-round-large w3-blue" href="/login">Log In</span>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Log Out</span>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Dark Mode</span>
   </span>
