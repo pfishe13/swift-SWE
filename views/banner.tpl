@@ -2,9 +2,9 @@
   <span class="w3-xxxlarge w3-margin"><b>Taskbook</b></span>
   <span class="w3-right">
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Overview</span>
-    <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Today</span>
+    <a href="/tasks"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Today</span></a>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Calories</span>
-    <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Sign up</span>
+    <a href="/register"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Sign up</span></a>
     <a href="/login"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Log In</span></a>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Log Out</span>
     <span class="w3-large w3-button w3-margin w3-round-large w3-blue">Dark Mode</span>
