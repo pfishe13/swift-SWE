@@ -26,7 +26,7 @@
             color: #e6e6e6;
         }
     </style>
-    <!-- <button onclick="myFunction()" class="w3-large w3-button w3-margin w3-round-large w3-blue">Dark Mode</button> -->
+    <button onclick="myFunction()" class="w3-large w3-button w3-margin w3-round-large w3-blue">Dark Mode</button>
     
     <script>
         function myFunction() {
@@ -45,7 +45,7 @@
             color: #e6e6e6;
         }
     </script>
-    <button onclick="myFunction()" class="w3-large w3-button w3-margin w3-round-large w3-blue">Dark Mode</button>
+    <!-- <button onclick="myFunction()" class="w3-large w3-button w3-margin w3-round-large w3-blue">Dark Mode</button> -->
     <script>
         function myFunction() {
         var element = document.body;
