@@ -1,4 +1,5 @@
-<div class="w3-container w3-topbar w3-leftbar w3-rightbar w3-border-white w3-black">
+<div class="w3-container w3-black">
+<!--  w3-topbar w3-leftbar w3-rightbar w3-border-white -->
   <span class="w3-xxxlarge w3-margin"><b>Taskbook</b></span>
   <span class="w3-right">
   <meta charset="UTF-8">
