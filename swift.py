@@ -37,7 +37,7 @@ def login():
     return template("login.tpl")
 
 @route('/register')
-def register():
+def login():
     return template("register.tpl")
 
 @route('/calories')
