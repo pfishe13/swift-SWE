@@ -9,12 +9,14 @@
   </style>
 </head>
 <body>
-<button id="darkbutton"  class="w3-large w3-button w3-margin w3-round-large w3-blue w3-right">Dark Mode</button>
-    <a href="/overview"><span class="w3-large w3-button w3-margin w3-round-large w3-blue w3-right">Overview</span></a>
-    <a href="/tasks"><span class="w3-large w3-button w3-margin w3-round-large w3-blue w3-right">Today</span></a>
-    <a href="/calories"><span class="w3-large w3-button w3-margin w3-round-large w3-blue w3-right">Calories</span></a>
-    <a href="/register"><span class="w3-large w3-button w3-margin w3-round-large w3-blue w3-right">Sign up</span></a>
-    <a href="/login"><span class="w3-large w3-button w3-margin w3-round-large w3-blue w3-right">Log In</span></a>
+<span class="w3-right">
+<button id="darkbutton"  class="w3-large w3-button w3-margin w3-round-large w3-blue">Dark Mode</button>
+    <a href="/overview"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Overview</span></a>
+    <a href="/tasks"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Today</span></a>
+    <a href="/calories"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Calories</span></a>
+    <a href="/register"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Sign up</span></a>
+    <a href="/login"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Log In</span></a>
+</span>
 <script>
 const body = document.querySelector('body');
 const button = document.querySelector('#darkbutton');
