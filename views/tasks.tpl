@@ -198,6 +198,11 @@ function display_task(x) {
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
         '      </span>' + 
         '  </td>' +
+        '  <td><span id="description-'+x.id+'" class="description' + completed + '">' + x.description + '</span>' + 
+        '      <span id="editor-'+x.id+'" hidden>' + 
+        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
+        '      </span>' + 
+        '  </td>' +
         '  <td>' +
         '    <span id="edit_task-'+x.id+'" class="edit_task '+x.list+' material-icons">edit</span>' +
         '    <span id="delete_task-'+x.id+'" class="delete_task material-icons">delete</span>' +
