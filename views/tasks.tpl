@@ -178,20 +178,20 @@ function display_task(x) {
   completed = x.completed ? " completed" : "";
   if ((x.id == "today") | (x.id == "tomorrow")) {
     t = '<tr id="task-'+x.id+'" class="task">' +
-        '  <td style="width:50px"></td>' +  
+        '  <td style="width:36px"></td>' +  
         '  <td><span id="editor-'+x.id+'">' + 
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="Add # of Sets..."/>'+
+        '          type="text" autofocus placeholder="# of Sets..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td><span id="editor-'+x.id+'">' + 
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="Add # of Reps..."/>'+
+        '          type="text" autofocus placeholder="# of Reps..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td><span id="editor-'+x.id+'">' + 
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="Add an Exercise..."/>'+
+        '          type="text" autofocus placeholder="Exercise..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td style="width:72px">' +
