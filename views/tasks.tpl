@@ -193,12 +193,12 @@ function display_task(x) {
   } else {
     t = '<tr id="task-'+x.id+'" class="task">' + 
         '  <td><span id="move_task-'+x.id+'" class="move_task '+x.list+' material-icons">' + arrow + '</span></td>' +
-        '  <td><span style="width: 15%" id="sets-'+x.id+'" class="sets' + completed + '">' + x.sets + '</span>' + 
+        '  <td><span id="sets-'+x.id+'" class="sets' + completed + '">' + x.sets + '</span>' + 
         '      <span id="editor-'+x.id+'" hidden>' + 
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
         '      </span>' + 
         '  </td>' +
-        '  <td><span style="width: 15%" id="reps-'+x.id+'" class="reps' + completed + '">' + x.reps + '</span>' + 
+        '  <td><span id="reps-'+x.id+'" class="reps' + completed + '">' + x.reps + '</span>' + 
         '      <span id="editor-'+x.id+'" hidden>' + 
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
         '      </span>' + 
