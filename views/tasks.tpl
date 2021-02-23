@@ -184,8 +184,8 @@ function display_task(x) {
         '          type="text" autofocus placeholder="# of Sets..."/></th>'+
         '        <th "width=6px"><input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="# of Reps..."/></th>'+ -->
-        '        <th><input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="Add an Exercise..."/></th>'+
+        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
+        '          type="text" autofocus placeholder="Add an Exercise..."/>+
         '      </span>' + 
         '  </td>' +
         '  <td style="width:72px">' +
