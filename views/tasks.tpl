@@ -185,7 +185,7 @@ function display_task(x) {
         '        <th "width=6px"><input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="# of Reps..."/></th>'+ -->
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="Add an Exercise..."/>+
+        '          type="text" autofocus placeholder="Add an Exercise..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td style="width:72px">' +
