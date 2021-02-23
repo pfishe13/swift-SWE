@@ -178,7 +178,7 @@ function display_task(x) {
   completed = x.completed ? " completed" : "";
   if ((x.id == "today") | (x.id == "tomorrow")) {
     t = '<tr id="task-'+x.id+'" class="task">' +
-        '  <td style="width:36px"></td>' +  
+        '  <td style="width:50px"></td>' +  
         '  <td><span id="editor-'+x.id+'">' + 
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="Add # of Sets..."/>'+
