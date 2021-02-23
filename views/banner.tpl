@@ -15,7 +15,7 @@
     <a href="/tasks"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Today</span></a>
     <a href="/calories"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Calories</span></a>
     <a href="/register"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Sign up</span></a>
-    <a href="/login"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Log In</span></a>
+    <a href="/login"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">test</span></a>
 </span>
 <script>
 const body = document.querySelector('body');
