@@ -180,12 +180,8 @@ function display_task(x) {
     t = '<tr id="task-'+x.id+'" class="task">' +
         '  <td style="width:36px"></td>' +  
         '  <td><span id="editor-'+x.id+'">' + 
-<!-- '        <th "width=6px"><input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="# of Sets..."/></th>'+
-        '        <th "width=6px"><input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="# of Reps..."/></th>'+ -->
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="Add an Exercise..."/>'+
+        '          type="text" autofocus placeholder="Add an item..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td style="width:72px">' +
