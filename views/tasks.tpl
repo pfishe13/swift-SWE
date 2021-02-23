@@ -181,6 +181,11 @@ function display_task(x) {
         '  <td style="width:36px"></td>' +  
         '  <td><span id="editor-'+x.id+'">' + 
         '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
+        '          type="text" autofocus placeholder="Add # of sets..."/>'+
+        '      </span>' + 
+        '  </td>' +
+        '  <td><span id="editor-'+x.id+'">' + 
+        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="Add an item..."/>'+
         '      </span>' + 
         '  </td>' +
