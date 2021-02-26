@@ -244,6 +244,8 @@ function get_current_tasks() {
     // wire the response events 
     $(".move_task").click(move_task);
     $(".description").click(complete_task)
+    $(".sets").click(complete_task)
+    $(".reps").click(complete_task)
     $(".edit_task").click(edit_task);
     $(".save_edit").click(save_edit);
     $(".undo_edit").click(undo_edit);
