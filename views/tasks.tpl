@@ -2,11 +2,13 @@
 % include("banner.tpl")
 
 <style>
-  .save_edit, .undo_edit, .move_task, .description, .edit_task, .delete_task {
+  .save_edit, .undo_edit, .move_task, .sets, .reps, .description, .edit_task, .delete_task {
     cursor: pointer;
   }
   .completed {text-decoration: line-through;}
   .description { padding-left:8px }
+  .sets { padding-left:8px }
+  .reps { padding-left:8px }
 </style>
 
 <div class="w3-row">
