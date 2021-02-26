@@ -95,6 +95,8 @@ function complete_task(event) {
   if ($("#current_input").val() != "") { return }
   console.log("complete item", event.target.id )
   id = event.target.id.replace("description-","");
+  id = event.target.id.replace("sets-","");
+  id = event.target.id.replace("reps-","");
   completed = event.target.className.search("completed") > 0;
   console.log("updating :",{'id':id, 'completed':completed==false})
   api_update_task({'id':id, 'completed':completed==false}, 
