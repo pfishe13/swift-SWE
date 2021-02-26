@@ -1,5 +1,26 @@
 <div class="w3-container w3-topbar w3-leftbar w3-rightbar w3-border-white w3-black">
 <span class="w3-xxxlarge w3-margin"><b>Taskbook</b></span>
+<div id="clockbox"  style="font:30pt Brush Script MT; color:#FF0000; text-align:right;"></div>
+
+<script type="text/javascript">
+var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+function GetClock(){
+var d=new Date();
+var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
+var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
+if(nhour==0){ap=" AM";nhour=12;}
+else if(nhour<12){ap=" AM";}
+else if(nhour==12){ap=" PM";}
+else if(nhour>12){ap=" PM";nhour-=12;}
+if(nmin<=9) nmin="0"+nmin;
+if(nsec<=9) nsec="0"+nsec;
+var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+document.getElementById("clockbox").innerHTML=clocktext;
+}
+GetClock();
+setInterval(GetClock,1000);
+</script>
 <meta charset="utf-8">
   <style>
     body {background-color: white}
