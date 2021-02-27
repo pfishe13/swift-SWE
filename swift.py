@@ -81,9 +81,7 @@ def create_task():
         assert type(data['description']) is str, "Description is not a string."
         assert len(data['description'].strip()) > 0, "Description is length zero."
         assert type(data['sets']) is str, "Sets is not a string."
-        assert len(data['sets'].strip()) > 0, "Sets is length zero."
         assert type(data['reps']) is str, "Reps is not a string."
-        assert len(data['reps'].strip()) > 0, "Reps is length zero."
         assert data['list'] in ["today","tomorrow"], "List must be 'today' or 'tomorrow'"
     except Exception as e:
         response.status="400 Bad Request:"+str(e)
@@ -117,10 +115,8 @@ def update_task():
             assert len(data['description'].strip()) > 0, "Description is length zero."
         if "sets" in request:
             assert type(data['sets']) is str, "Sets is not a string."
-            assert len(data['sets'].strip()) > 0, "Sets is length zero."
         if "reps" in request:
             assert type(data['reps']) is str, "Reps is not a string."
-            assert len(data['reps'].strip()) > 0, "Reps is length zero."
         if "completed" in request:
             assert type(data['completed']) is bool, "Completed is not a bool."
         if "list" in request:
