@@ -187,6 +187,8 @@ function undo_edit(event) {
     $("#undo_edit-"+id).prop('hidden', true);
     // show the text display
     $("#move_task-"+id).prop('hidden', false);
+    $("#sets-"+id).prop('hidden', false);
+    $("#reps-"+id).prop('hidden', false);
     $("#description-"+id).prop('hidden', false);
     $("#filler-"+id).prop('hidden', false);
     $("#edit_task-"+id).prop('hidden', false);
