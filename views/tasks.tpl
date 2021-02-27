@@ -138,6 +138,8 @@ function edit_task(event) {
   $("#input-"+id).val($("#description-"+id).text());
   // hide the text display
   $("#move_task-"+id).prop('hidden', true);
+  $("#sets-"+id).prop('hidden', true);
+  $("#reps-"+id).prop('hidden', true);
   $("#description-"+id).prop('hidden', true);
   $("#edit_task-"+id).prop('hidden', true);
   $("#delete_task-"+id).prop('hidden', true);
