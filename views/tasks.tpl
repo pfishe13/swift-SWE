@@ -72,6 +72,8 @@ function input_keypress(event) {
     $("#current_input").val(event.target.id)
   }
   id = event.target.id.replace("input-","");
+  id = event.target.id.replace("set_input-","");    // new
+  id = event.target.id.replace("rep_input-","");    // new
   $("#filler-"+id).prop('hidden', true);
   $("#save_edit-"+id).prop('hidden', false);
   $("#undo_edit-"+id).prop('hidden', false);
@@ -135,6 +137,8 @@ function edit_task(event) {
   console.log("edit item", event.target.id)
   id = event.target.id.replace("edit_task-","");
   // move the text to the input editor
+  $("#set_input-"+id).val($("#sets-"+id).text());   // new
+  $("#rep_input-"+id).val($("#reps-"+id).text());   // new
   $("#input-"+id).val($("#description-"+id).text());
   // hide the text display
   $("#move_task-"+id).prop('hidden', true);
@@ -144,6 +148,8 @@ function edit_task(event) {
   $("#edit_task-"+id).prop('hidden', true);
   $("#delete_task-"+id).prop('hidden', true);
   // show the editor
+  $("#set_editor-"+id).prop('hidden', false);   // new
+  $("#rep_editor-"+id).prop('hidden', false);   // new
   $("#editor-"+id).prop('hidden', false);
   $("#save_edit-"+id).prop('hidden', false);
   $("#undo_edit-"+id).prop('hidden', false);
@@ -155,15 +161,17 @@ function save_edit(event) {
   console.log("save item", event.target.id)
   id = event.target.id.replace("save_edit-","");
   console.log("desc to save = ",$("#input-" + id).val())
+  console.log("reps to save = ",$("#rep_input-" + id).val())    // new, also edited the parameters in the calls below
+  console.log("sets to save = ",$("#set_input-" + id).val())    // new
   if ((id != "today") & (id != "tomorrow")) {
-    api_update_task({'id':id, description:$("#input-" + id).val()},
+    api_update_task({'id':id, description:$("#input-" + id).val(), sets:$("#set_input-" + id).val(), reps:$("#rep_input-" + id).val()},
                     function(result) { 
                       console.log(result);
                       get_current_tasks();
                       $("#current_input").val("")
                     } );
   } else {
-    api_create_task({description:$("#input-" + id).val(), list:id},
+    api_create_task({description:$("#input-" + id).val(), sets:$("#set_input-" + id).val(), reps:$("#rep_input-" + id).val(), list:id},
                     function(result) { 
                       console.log(result);
                       get_current_tasks();
@@ -176,8 +184,12 @@ function undo_edit(event) {
   id = event.target.id.replace("undo_edit-","")
   console.log("undo",[id])
   $("#input-" + id).val("");
+  $("#set_input-" + id).val("");    // new
+  $("#rep_input-" + id).val("");    // new
   if ((id != "today") & (id != "tomorrow")) {
     // hide the editor
+    $("#set_editor-"+id).prop('hidden', true);    // new
+    $("#rep_editor-"+id).prop('hidden', true);    // new
     $("#editor-"+id).prop('hidden', true);
     $("#save_edit-"+id).prop('hidden', true);
     $("#undo_edit-"+id).prop('hidden', true);
@@ -209,13 +221,13 @@ function display_task(x) {
   if ((x.id == "today") | (x.id == "tomorrow")) {
     t = '<tr id="task-'+x.id+'" class="task">' +
         '  <td style="width:36px"></td>' +  
-        '  <td><span id="editor-'+x.id+'">' + 
-        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
+        '  <td><span id="set_editor-'+x.id+'">' + 
+        '        <input id="set_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="# of Sets..."/>'+
         '      </span>' + 
         '  </td>' +
-        '  <td><span id="editor-'+x.id+'">' + 
-        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
+        '  <td><span id="rep_editor-'+x.id+'">' + 
+        '        <input id="rep_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="# of Reps..."/>'+
         '      </span>' + 
         '  </td>' +
@@ -234,13 +246,13 @@ function display_task(x) {
     t = '<tr id="task-'+x.id+'" class="task">' + 
         '  <td><span id="move_task-'+x.id+'" class="move_task '+x.list+' material-icons">' + arrow + '</span></td>' +
         '  <td><span id="sets-'+x.id+'" class="sets' + completed + '">' + x.sets + '</span>' + 
-        '      <span id="editor-'+x.id+'" hidden>' + 
-        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
+        '      <span id="set_editor-'+x.id+'" hidden>' + 
+        '        <input id="set_input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
         '      </span>' + 
         '  </td>' +
         '  <td><span id="reps-'+x.id+'" class="reps' + completed + '">' + x.reps + '</span>' + 
-        '      <span id="editor-'+x.id+'" hidden>' + 
-        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
+        '      <span id="rep_editor-'+x.id+'" hidden>' + 
+        '        <input id="rep_input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
         '      </span>' + 
         '  </td>' +
         '  <td><span id="description-'+x.id+'" class="description' + completed + '">' + x.description + '</span>' + 
