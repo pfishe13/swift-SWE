@@ -144,9 +144,7 @@ function edit_task(event) {
   $("#edit_task-"+id).prop('hidden', true);
   $("#delete_task-"+id).prop('hidden', true);
   // show the editor
-  $("#set_editor-"+id).prop('hidden', false);
-  $("#rep_editor-"+id).prop('hidden', false);
-  $("#description_editor-"+id).prop('hidden', false);
+  $("#editor-"+id).prop('hidden', false);
   $("#save_edit-"+id).prop('hidden', false);
   $("#undo_edit-"+id).prop('hidden', false);
   // set the editing flag
