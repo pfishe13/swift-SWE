@@ -63,9 +63,9 @@ function input_keypress(event) {
   if (event.target.id != "current_input") {
     $("#current_input").val(event.target.id)
   }
-  id = event.target.id.replace("input-","");
   id = event.target.id.replace("set_input-","");    // new
   id = event.target.id.replace("rep_input-","");    // new
+  id = event.target.id.replace("input-","");
   $("#filler-"+id).prop('hidden', true);
   $("#save_edit-"+id).prop('hidden', false);
   $("#undo_edit-"+id).prop('hidden', false);
