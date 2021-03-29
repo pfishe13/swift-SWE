@@ -48,7 +48,13 @@ a:hover{
 </div>
 <button type="button" class="collapsible">Chest</button>
 <div class="content">
-  <p> </p>
+  <p><a href="https://youtu.be/bQecK293VC8"> Bench Press </a> </p>
+  <p><a href="https://youtu.be/DymU0XxX6EA"> Incline Bench Press </a> </p>
+  <p><a href="https://youtu.be/3ZqYMq9QUyM"> Decline Bench Press </a> </p>
+  <p><a href="https://youtu.be/0Jh5OiOlxE0"> Dumbbell Bench Press </a> </p>
+  <p><a href="https://youtu.be/lQ_M8mDvP88"> Dumbbell Chest Fly </a> </p>
+  <p><a href="https://youtu.be/fmcB1JcqA8Q"> Push Up </a> </p>
+  <p><a href="https://youtu.be/0NTIpNe6EyM"> Dumbbell Pullover </a> </p>
 </div>
 <button type="button" class="collapsible">Back</button>
 <div class="content">
