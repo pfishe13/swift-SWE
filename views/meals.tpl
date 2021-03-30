@@ -2,7 +2,7 @@
 % include("banner.tpl")
 
 <style>
-  .save_edit, .undo_edit, .move_meal, .amount, .calories, .food, .edit_meal, .delete_meal
+  .save_food_edit, .undo_food_edit, .move_meal, .amount, .calories, .food, .edit_meal, .delete_meal
     cursor: pointer;
   }
   .completed {text-decoration: line-through;}
@@ -60,8 +60,8 @@ function input_keypress(event) {
   id = event.target.id.replace("calories_input-","");    // added
   id = event.target.id.replace("input-","");
   $("#filler-"+id).prop('hidden', true);
-  $("#save_edit-"+id).prop('hidden', false);
-  $("#undo_edit-"+id).prop('hidden', false);
+  $("#save_food_edit-"+id).prop('hidden', false);
+  $("#undo_food_edit-"+id).prop('hidden', false);
 }
 /* EVENT HANDLERS */
 function move_meal(event) {
@@ -121,7 +121,7 @@ function edit_meal(event) {
   // move the text to the input editor
   $("#amount_input-"+id).val($("#amount-"+id).text());   // added
   $("#calories_input-"+id).val($("#calories-"+id).text());   // added
-  $("#input-"+id).val($("#food-"+id).text());
+  $("#food_input-"+id).val($("#food-"+id).text());
   // hide the text display
   $("#move_meal-"+id).prop('hidden', true);
   $("#amount-"+id).prop('hidden', true);              // added
@@ -133,26 +133,26 @@ function edit_meal(event) {
   $("#amount_editor-"+id).prop('hidden', false);   // added
   $("#calories_editor-"+id).prop('hidden', false);   // added
   $("#editor-"+id).prop('hidden', false);
-  $("#save_edit-"+id).prop('hidden', false);
-  $("#undo_edit-"+id).prop('hidden', false);
+  $("#save_food_edit-"+id).prop('hidden', false);
+  $("#undo_food_edit-"+id).prop('hidden', false);
   // set the editing flag
   $("#current_input").val(event.target.id)
 }
-function save_edit(event) {
+function save_food_edit(event) {
   console.log("save item", event.target.id)
-  id = event.target.id.replace("save_edit-","");
-  console.log("food to save = ",$("#input-" + id).val())
+  id = event.target.id.replace("save_food_edit-","");
+  console.log("food to save = ",$("#food_input-" + id).val())
   console.log("amount to save = ",$("#amount_input-" + id).val())    // added
   console.log("calories to save = ",$("#calories_input-" + id).val())    // added
   if ((id != "today") & (id != "tomorrow")) {
-    api_update_meal({'id':id, food:$("#input-" + id).val(), amount:$("#amount_input-" + id).val(), calories:$("#calories_input-" + id).val()},
+    api_update_meal({'id':id, food:$("#food_input-" + id).val(), amount:$("#amount_input-" + id).val(), calories:$("#calories_input-" + id).val()},
                     function(result) { 
                       console.log(result);
                       get_current_meals();
                       $("#current_input").val("")
                     } );
   } else {
-    api_create_meal({food:$("#input-" + id).val(), amount:$("#amount_input-" + id).val(), calories:$("#calories_input-" + id).val(), list:id},
+    api_create_meal({food:$("#food_input-" + id).val(), amount:$("#amount_input-" + id).val(), calories:$("#calories_input-" + id).val(), list:id},
                     function(result) { 
                       console.log(result);
                       get_current_meals();
@@ -160,10 +160,10 @@ function save_edit(event) {
                     } );
   }
 }
-function undo_edit(event) {
-  id = event.target.id.replace("undo_edit-","")
+function undo_food_edit(event) {
+  id = event.target.id.replace("undo_food_edit-","")
   console.log("undo",[id])
-  $("#input-" + id).val("");
+  $("#food_input-" + id).val("");
   $("#amount_input-" + id).val("");    // added
   $("#calories_input-" + id).val("");    // added
   if ((id != "today") & (id != "tomorrow")) {
@@ -171,8 +171,8 @@ function undo_edit(event) {
     $("#amount_editor-"+id).prop('hidden', true);    // added
     $("#calories_editor-"+id).prop('hidden', true);    // added
     $("#editor-"+id).prop('hidden', true);
-    $("#save_edit-"+id).prop('hidden', true);
-    $("#undo_edit-"+id).prop('hidden', true);
+    $("#save_food_edit-"+id).prop('hidden', true);
+    $("#undo_food_edit-"+id).prop('hidden', true);
     // show the text display
     $("#move_meal-"+id).prop('hidden', false);
     $("#amount-"+id).prop('hidden', false);
@@ -212,14 +212,14 @@ function display_meal(x) {
         '      </span>' + 
         '  </td>' +
         '  <td><span id="editor-'+x.id+'">' + 
-        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" '+ 
+        '        <input id="food_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="Food..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td style="width:72px">' +
         '    <span id="filler-'+x.id+'" class="material-icons">more_horiz</span>' + 
-        '    <span id="save_edit-'+x.id+'" hidden class="save_edit material-icons">done</span>' + 
-        '    <span id="undo_edit-'+x.id+'" hidden class="undo_edit material-icons">cancel</span>' +
+        '    <span id="save_food_edit-'+x.id+'" hidden class="save_food_edit material-icons">done</span>' + 
+        '    <span id="undo_food_edit-'+x.id+'" hidden class="undo_food_edit material-icons">cancel</span>' +
         '  </td>' +
         '</tr>';
   } else {
@@ -237,14 +237,14 @@ function display_meal(x) {
         '  </td>' +
         '  <td><span id="food-'+x.id+'" class="food' + completed + '">' + x.food + '</span>' + 
         '      <span id="editor-'+x.id+'" hidden>' + 
-        '        <input id="input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
+        '        <input id="food_input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
         '      </span>' + 
         '  </td>' +
         '  <td>' +
         '    <span id="edit_meal-'+x.id+'" class="edit_meal '+x.list+' material-icons">edit</span>' +
         '    <span id="delete_meal-'+x.id+'" class="delete_meal material-icons">delete</span>' +
-        '    <span id="save_edit-'+x.id+'" hidden class="save_edit material-icons">done</span>' + 
-        '    <span id="undo_edit-'+x.id+'" hidden class="undo_edit material-icons">cancel</span>' +
+        '    <span id="save_food_edit-'+x.id+'" hidden class="save_food_edit material-icons">done</span>' + 
+        '    <span id="undo_food_edit-'+x.id+'" hidden class="undo_food_edit material-icons">cancel</span>' +
         '  </td>' +
         '</tr>';
   }
@@ -268,8 +268,8 @@ function get_current_meals() {
     $(".amount").click(complete_meal_amount)
     $(".calories").click(complete_meal_calories)
     $(".edit_meal").click(edit_meal);
-    $(".save_edit").click(save_edit);
-    $(".undo_edit").click(undo_edit);
+    $(".save_food_edit").click(save_food_edit);
+    $(".undo_food_edit").click(undo_food_edit);
     $(".delete_meal").click(delete_meal);
     // set all inputs to set flag
     $("input").keypress(input_keypress);
