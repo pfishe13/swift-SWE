@@ -40,7 +40,7 @@ def login():
 def login():
     return template("register.tpl")
 
-@route('/calories')
+@route('/meals')
 def calories():
     return template("calories.tpl")
 
