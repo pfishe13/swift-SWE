@@ -76,7 +76,7 @@ function move_meal(event) {
                   } );
 }
 // called when 'food' is clicked -- completes meal
-function complete_meal_des(event) {
+function complete_meal_food(event) {
   if ($("#current_input").val() != "") { return }
   console.log("complete item", event.target.id )
   id = event.target.id.replace("food-","");
@@ -89,7 +89,7 @@ function complete_meal_des(event) {
                   } );
 }
 // called when 'amount' is clicked -- completes meal
-function complete_meal_set(event) {
+function complete_meal_amount(event) {
   if ($("#current_input").val() != "") { return }
   console.log("complete item", event.target.id )
   id = event.target.id.replace("amount-","");
@@ -102,7 +102,7 @@ function complete_meal_set(event) {
                   } );
 }
 // called when 'calories' is clicked -- completes meal
-function complete_meal_rep(event) {
+function complete_meal_calories(event) {
   if ($("#current_input").val() != "") { return }
   console.log("complete item", event.target.id )
   id = event.target.id.replace("calories-","");
