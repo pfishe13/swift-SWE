@@ -85,9 +85,11 @@ def create_task():
     try:
         data = request.json
         for key in data.keys():
-            assert key in ["description","list"], f"Illegal key '{key}'"
+            assert key in ["description", "sets", "reps", "list"], f"Illegal key '{key}'"
         assert type(data['description']) is str, "Description is not a string."
         assert len(data['description'].strip()) > 0, "Description is length zero."
+        assert type(data['sets']) is str, "Sets is not a string."
+        assert type(data['reps']) is str, "Reps is not a string."
         assert data['list'] in ["today","tomorrow"], "List must be 'today' or 'tomorrow'"
     except Exception as e:
         response.status="400 Bad Request:"+str(e)
@@ -96,6 +98,8 @@ def create_task():
         task_table = taskbook_db.get_table('task')
         task_table.insert({
             "time": time.time(),
+            "sets":data['sets'].strip(),
+            "reps":data['reps'].strip(),
             "description":data['description'].strip(),
             "list":data['list'],
             "completed":False
@@ -112,11 +116,15 @@ def update_task():
     try:
         data = request.json
         for key in data.keys():
-            assert key in ["id","description","completed","list"], f"Illegal key '{key}'"
+            assert key in ["id","description","completed","list","sets","reps"], f"Illegal key '{key}'"
         assert type(data['id']) is int, f"id '{id}' is not int"
         if "description" in request:
             assert type(data['description']) is str, "Description is not a string."
             assert len(data['description'].strip()) > 0, "Description is length zero."
+        if "sets" in request:
+            assert type(data['sets']) is str, "Sets is not a string."
+        if "reps" in request:
+            assert type(data['reps']) is str, "Reps is not a string."
         if "completed" in request:
             assert type(data['completed']) is bool, "Completed is not a bool."
         if "list" in request:
@@ -160,5 +168,3 @@ if PYTHONANYWHERE:
 else:
    if __name__ == "__main__":
        run(host='localhost', port=8080, debug=True)
-
-
