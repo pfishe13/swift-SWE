@@ -41,8 +41,8 @@ def login():
     return template("register.tpl")
 
 @route('/meals')
-def calories():
-    return template("calories.tpl")
+def meals():
+    return template("meals.tpl")
 
 @route('/overview')
 def overview():
