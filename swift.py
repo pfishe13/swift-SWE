@@ -163,6 +163,105 @@ def delete_task():
     response.headers['Content-Type'] = 'application/json'
     return json.dumps({'success': True})
 
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+@get('/api/meals')
+def get_meals():
+    'return a list of meals sorted by submit/modify time'
+    response.headers['Content-Type'] = 'application/json'
+    response.headers['Cache-Control'] = 'no-cache'
+    task_table = taskbook_db.get_table('meal')
+    meals = [dict(x) for x in meal_table.find(order_by='time')]
+    return { "meals": meals }
+
+@post('/api/meals')
+def create_meal():
+    'create a new meal in the database'
+    try:
+        data = request.json
+        for key in data.keys():
+            assert key in ["food", "amount", "calories", "list"], f"Illegal key '{key}'"
+        assert type(data['food']) is str, "Food is not a string."
+        assert len(data['food'].strip()) > 0, "Food is length zero."
+        assert type(data['amount']) is str, "Sets is not a string."
+        assert type(data['calories']) is str, "Reps is not a string."
+        assert data['list'] in ["today","tomorrow"], "List must be 'today' or 'tomorrow'"
+    except Exception as e:
+        response.status="400 Bad Request:"+str(e)
+        return
+    try:
+        meal_table = taskbook_db.get_table('meal')
+        meal_table.insert({
+            "time": time.time(),
+            "amount":data['amount'].strip(),
+            "calories":data['calories'].strip(),
+            "food":data['food'].strip(),
+            "list":data['list'],
+            "completed":False
+        })
+    except Exception as e:
+        response.status="409 Bad Request:"+str(e)
+    # return 200 Success
+    response.headers['Content-Type'] = 'application/json'
+    return json.dumps({'status':200, 'success': True})
+
+@put('/api/meals')
+def update_meal():
+    'update properties of an existing meal in the database'
+    try:
+        data = request.json
+        for key in data.keys():
+            assert key in ["id","food","completed","list","amount","calories"], f"Illegal key '{key}'"
+        assert type(data['id']) is int, f"id '{id}' is not int"
+        if "food" in request:
+            assert type(data['food']) is str, "Food is not a string."
+            assert len(data['food'].strip()) > 0, "Food is length zero."
+        if "amount" in request:
+            assert type(data['amount']) is str, "Amount is not a string."
+        if "calories" in request:
+            assert type(data['calories']) is str, "Calories is not a string."
+        if "completed" in request:
+            assert type(data['completed']) is bool, "Completed is not a bool."
+        if "list" in request:
+            assert data['list'] in ["today","tomorrow"], "List must be 'today' or 'tomorrow'"
+    except Exception as e:
+        response.status="400 Bad Request:"+str(e)
+        return
+    if 'list' in data:
+        data['time'] = time.time()
+    try:
+        meal_table = taskbook_db.get_table('meal')
+        meal_table.update(row=data, keys=['id'])
+    except Exception as e:
+        response.status="409 Bad Request:"+str(e)
+        return
+    # return 200 Success
+    response.headers['Content-Type'] = 'application/json'
+    return json.dumps({'status':200, 'success': True})
+
+@delete('/api/meals')
+def delete_meal():
+    'delete an existing meal in the database'
+    try:
+        data = request.json
+        assert type(data['id']) is int, f"id '{id}' is not int"
+    except Exception as e:
+        response.status="400 Bad Request:"+str(e)
+        return
+    try:
+        meal_table = taskbook_db.get_table('meal')
+        meal_table.delete(id=data['id'])
+    except Exception as e:
+        response.status="409 Bad Request:"+str(e)
+        return
+    # return 200 Success
+    response.headers['Content-Type'] = 'application/json'
+    return json.dumps({'success': True})
+
+/////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
 if PYTHONANYWHERE:
     application = default_app()
 else:
