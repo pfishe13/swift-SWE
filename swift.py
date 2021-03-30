@@ -171,7 +171,7 @@ def get_meals():
     'return a list of meals sorted by submit/modify time'
     response.headers['Content-Type'] = 'application/json'
     response.headers['Cache-Control'] = 'no-cache'
-    task_table = taskbook_db.get_table('meal')
+    meal_table = taskbook_db.get_table('meal')
     meals = [dict(x) for x in meal_table.find(order_by='time')]
     return { "meals": meals }
 
