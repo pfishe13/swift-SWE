@@ -11,21 +11,19 @@
 }
 .active, .collapsible:hover {
   background-color: black;
-  color: white;
   cursor: pointer;
+  color: white;
 }
 .content {
   padding: 18px;
   padding-bottom: 30px;
   display: none;
   overflow: hidden;
-  color = white;
 }
 div.resources {
     text-indent: 50px;
 }
 a:link{
-  color: white;
   cursor: pointer;
   text-decoration: none;
 }
@@ -42,7 +40,7 @@ a:hover{
   <p><a href="https://youtu.be/rL6b6LDJK5w"> Lateral Raise </a> </p>
   <p><a href="https://youtu.be/Vm1oShjeCAc"> Front Raise </a> </p>
   <p><a href="https://youtu.be/UBoMrEff-vM"> Bent Over Lateral Raise </a> </p>
-  <p><a href="https://youtu.be/_Yb_exS0iaI"> Military Press </a> </p>
+  <p><a href="https://youtu.be/dgwQUL4gpyo"> Military Press </a> </p>
   <p><a href="https://youtu.be/_Yb_exS0iaI"> Dumbbell Shoulder Press </a> </p>
   <p><a href="https://youtu.be/JmMIYI-GV0I"> Shoulder Shrug </a> </p>
 </div>
@@ -96,7 +94,7 @@ a:hover{
 <div class="content">
   <p><a href="https://youtu.be/733RiX6fjs0"> Barbell Squat </a> </p>
   <p><a href="https://youtu.be/RaV4JPphKls"> Barbell Front Squat </a> </p>
-  <p><a href="https://youtu.be/4sb_SvYz740"> Barbell Lunge </a> </p>
+  <p><a href="https://youtu.be/4sb_SvYz740"> Dumbbell Lunge </a> </p>
   <p><a href="https://youtu.be/3gpXflqRiEc"> Goblet Squat </a> </p>
   <p><a href="https://youtu.be/7Aqeb8UHl4k"> Bulgarian Split Squat </a> </p>
   <p><a href="https://youtu.be/lTTi8pVRteo"> Calf Raise </a> </p>
