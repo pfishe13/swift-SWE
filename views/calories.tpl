@@ -264,9 +264,9 @@ function get_current_meals() {
     }
     // wire the response events 
     $(".move_meal").click(move_meal);
-    $(".food").click(complete_task_food)
-    $(".amount").click(complete_task_amount)
-    $(".calories").click(complete_task_calories)
+    $(".food").click(complete_meal_food)
+    $(".amount").click(complete_meal_amount)
+    $(".calories").click(complete_meal_calories)
     $(".edit_meal").click(edit_meal);
     $(".save_edit").click(save_edit);
     $(".undo_edit").click(undo_edit);
