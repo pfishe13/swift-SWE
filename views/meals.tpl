@@ -28,7 +28,7 @@ function api_get_meals(success_function) {
   $.ajax({url:"api/meals", type:"GET", 
           success:success_function});
 }
-function api_create_meal(meals, success_function) {
+function api_create_meal(meal, success_function) {
   console.log("creating meal with:", meal)
   $.ajax({url:"api/meals", type:"POST", 
           data:JSON.stringify(meal), 
