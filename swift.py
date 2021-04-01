@@ -184,8 +184,8 @@ def create_meal():
             assert key in ["food", "amount", "calories", "list"], f"Illegal key '{key}'"
         assert type(data['food']) is str, "Food is not a string."
         assert len(data['food'].strip()) > 0, "Food is length zero."
-        assert type(data['amount']) is str, "Sets is not a string."
-        assert type(data['calories']) is str, "Reps is not a string."
+        assert type(data['amount']) is str, "Amount is not a string."
+        assert type(data['calories']) is int, "Calories is not an integer."
         assert data['list'] in ["today","tomorrow"], "List must be 'today' or 'tomorrow'"
     except Exception as e:
         response.status="400 Bad Request:"+str(e)
@@ -220,7 +220,7 @@ def update_meal():
         if "amount" in request:
             assert type(data['amount']) is str, "Amount is not a string."
         if "calories" in request:
-            assert type(data['calories']) is str, "Calories is not a string."
+            assert type(data['calories']) is int, "Calories is not an integer."
         if "completed" in request:
             assert type(data['completed']) is bool, "Completed is not a bool."
         if "list" in request:
