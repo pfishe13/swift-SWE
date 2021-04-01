@@ -58,7 +58,7 @@ function input_keypress(event) {
   }
   id = event.target.id.replace("amount_input-","");    // added
   id = event.target.id.replace("calories_input-","");    // added
-  id = event.target.id.replace("input-","");
+  id = event.target.id.replace("food_input-","");
   $("#filler-"+id).prop('hidden', true);
   $("#save_food_edit-"+id).prop('hidden', false);
   $("#undo_food_edit-"+id).prop('hidden', false);
