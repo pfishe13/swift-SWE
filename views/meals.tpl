@@ -2,7 +2,7 @@
 % include("banner.tpl")
 
 <style>
-  .save_food_edit, .undo_food_edit, .move_meal, .amount, .calories, .food, .edit_meal, .delete_meal
+  .save_food_edit, .undo_food_edit, .move_meal, .amount, .calories, .food, .edit_meal, .delete_meal {
     cursor: pointer;
   }
   .completed {text-decoration: line-through;}
