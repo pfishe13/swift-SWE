@@ -21,7 +21,7 @@
     <div class="w3-row w3-bottombar w3-border-black w3-margin-bottom w3-margin-top"></div>
   </div>
 </div>
-<input id="current_input" hidden value=""/> 
+<input id="current_food_input" hidden value=""/> 
 <script>
 /* API CALLS */
 function api_get_meals(success_function) {
@@ -53,8 +53,8 @@ function api_delete_meal(meal, success_function) {
 }
 /* KEYPRESS MONITOR */
 function input_keypress(event) {
-  if (event.target.id != "current_input") {
-    $("#current_input").val(event.target.id)
+  if (event.target.id != "current_food_input") {
+    $("#current_food_input").val(event.target.id)
   }
   id = event.target.id.replace("amount_input-","");    // added
   id = event.target.id.replace("calories_input-","");    // added
@@ -65,7 +65,7 @@ function input_keypress(event) {
 }
 /* EVENT HANDLERS */
 function move_meal(event) {
-  if ($("#current_input").val() != "") { return }
+  if ($("#current_food_input").val() != "") { return }
   console.log("move item", event.target.id )
   id = event.target.id.replace("move_meal-","");
   target_list = event.target.className.search("today") > 0 ? "tomorrow" : "today";
@@ -77,7 +77,7 @@ function move_meal(event) {
 }
 // called when 'food' is clicked -- completes meal
 function complete_meal_food(event) {
-  if ($("#current_input").val() != "") { return }
+  if ($("#current_food_input").val() != "") { return }
   console.log("complete item", event.target.id )
   id = event.target.id.replace("food-","");
   completed = event.target.className.search("completed") > 0;
@@ -90,7 +90,7 @@ function complete_meal_food(event) {
 }
 // called when 'amount' is clicked -- completes meal
 function complete_meal_amount(event) {
-  if ($("#current_input").val() != "") { return }
+  if ($("#current_food_input").val() != "") { return }
   console.log("complete item", event.target.id )
   id = event.target.id.replace("amount-","");
   completed = event.target.className.search("completed") > 0;
@@ -103,7 +103,7 @@ function complete_meal_amount(event) {
 }
 // called when 'calories' is clicked -- completes meal
 function complete_meal_calories(event) {
-  if ($("#current_input").val() != "") { return }
+  if ($("#current_food_input").val() != "") { return }
   console.log("complete item", event.target.id )
   id = event.target.id.replace("calories-","");
   completed = event.target.className.search("completed") > 0;
@@ -115,7 +115,7 @@ function complete_meal_calories(event) {
                   } );
 }
 function edit_meal(event) {
-  if ($("#current_input").val() != "") { return }
+  if ($("#current_food_input").val() != "") { return }
   console.log("edit item", event.target.id)
   id = event.target.id.replace("edit_meal-","");
   // move the text to the input editor
@@ -136,7 +136,7 @@ function edit_meal(event) {
   $("#save_food_edit-"+id).prop('hidden', false);
   $("#undo_food_edit-"+id).prop('hidden', false);
   // set the editing flag
-  $("#current_input").val(event.target.id)
+  $("#current_food_input").val(event.target.id)
 }
 function save_food_edit(event) {
   console.log("save item", event.target.id)
@@ -149,14 +149,14 @@ function save_food_edit(event) {
                     function(result) { 
                       console.log(result);
                       get_current_meals();
-                      $("#current_input").val("")
+                      $("#current_food_input").val("")
                     } );
   } else {
     api_create_meal({food:$("#food_input-" + id).val(), amount:$("#amount_input-" + id).val(), calories:$("#calories_input-" + id).val(), list:id},
                     function(result) { 
                       console.log(result);
                       get_current_meals();
-                      $("#current_input").val("")
+                      $("#current_food_input").val("")
                     } );
   }
 }
@@ -183,10 +183,10 @@ function undo_food_edit(event) {
     $("#delete_meal-"+id).prop('hidden', false);
   }
   // set the editing flag
-  $("#current_input").val("")
+  $("#current_food_input").val("")
 }
 function delete_meal(event) {
-  if ($("#current_input").val() != "") { return }
+  if ($("#current_food_input").val() != "") { return }
   console.log("delete item", event.target.id )
   id = event.target.id.replace("delete_meal-","");
   api_delete_meal({'id':id},
@@ -249,7 +249,7 @@ function display_meal(x) {
         '</tr>';
   }
   $("#meal-list-" + x.list).append(t);
-  $("#current_input").val("")
+  $("#current_food_input").val("")
 }
 function get_current_meals() {
   // remove the old meals
