@@ -185,7 +185,7 @@ def create_meal():
         assert type(data['food']) is str, "Food is not a string."
         assert len(data['food'].strip()) > 0, "Food is length zero."
         assert type(data['amount']) is str, "Amount is not a string."
-        assert type(data['calories']) is int, "Calories is not an integer."
+        assert type(data['calories']) is str, "Calories is not an integer."
         assert len(data['calories'].strip()) > 0, "Calories is length zero."
         assert data['list'] in ["today","tomorrow"], "List must be 'today' or 'tomorrow'"
     except Exception as e:
