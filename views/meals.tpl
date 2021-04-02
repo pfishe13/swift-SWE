@@ -207,8 +207,8 @@ function display_meal(x) {
         '      </span>' + 
         '  </td>' +
         '  <td><span id="calories_editor-'+x.id+'">' + 
-        '        <input type="number" id="calories_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="# of Calories..."/>'+
+        '        <input id="calories_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
+        '          type="number" autofocus placeholder="# of Calories..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td><span id="editor-'+x.id+'">' + 
@@ -232,7 +232,7 @@ function display_meal(x) {
         '  </td>' +
         '  <td><span id="calories-'+x.id+'" class="calories' + completed + '">' + x.calories + '</span>' + 
         '      <span id="calories_editor-'+x.id+'" hidden>' + 
-        '        <input type="number" id="calories_input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
+        '        <input id="calories_input-'+x.id+'" style="height:22px" class="w3-input" type="number" autofocus/>' +
         '      </span>' + 
         '  </td>' +
         '  <td><span id="food-'+x.id+'" class="food' + completed + '">' + x.food + '</span>' + 
