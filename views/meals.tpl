@@ -206,14 +206,14 @@ function display_meal(x) {
         '          type="text" autofocus placeholder="Amount..."/>'+
         '      </span>' + 
         '  </td>' +
-        '  <td><span id="calories_editor-'+x.id+'">' + 
-        '        <input id="calories_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="number" autofocus placeholder="# of Calories..."/>'+
-        '      </span>' + 
-        '  </td>' +
         '  <td><span id="editor-'+x.id+'">' + 
         '        <input id="food_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="Food..."/>'+
+        '      </span>' + 
+        '  </td>' +
+        '  <td><span id="calories_editor-'+x.id+'">' + 
+        '        <input id="calories_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
+        '          type="number" autofocus placeholder="# of Calories..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td style="width:72px">' +
@@ -230,14 +230,14 @@ function display_meal(x) {
         '        <input id="amount_input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
         '      </span>' + 
         '  </td>' +
-        '  <td><span id="calories-'+x.id+'" class="calories' + completed + '">' + x.calories + '</span>' + 
-        '      <span id="calories_editor-'+x.id+'" hidden>' + 
-        '        <input id="calories_input-'+x.id+'" style="height:22px" class="w3-input" type="number" autofocus/>' +
-        '      </span>' + 
-        '  </td>' +
         '  <td><span id="food-'+x.id+'" class="food' + completed + '">' + x.food + '</span>' + 
         '      <span id="editor-'+x.id+'" hidden>' + 
         '        <input id="food_input-'+x.id+'" style="height:22px" class="w3-input" type="text" autofocus/>' +
+        '      </span>' + 
+        '  </td>' +
+        '  <td><span id="calories-'+x.id+'" class="calories' + completed + '">' + x.calories + '</span>' + 
+        '      <span id="calories_editor-'+x.id+'" hidden>' + 
+        '        <input id="calories_input-'+x.id+'" style="height:22px" class="w3-input" type="number" autofocus/>' +
         '      </span>' + 
         '  </td>' +
         '  <td>' +
