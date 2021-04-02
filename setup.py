@@ -15,6 +15,6 @@ if __name__ == "__main__":
     meal_table.drop()
     meal_table = taskbook_db.create_table('meal')
     meal_table.insert_many([
-        {"time":0.0, "food":"Apple", "amount":"1", "calories":"52","list":"today", "completed":False},
-        {"time":0.5, "food":"Grilled Chicken", "amount":"3 ounces", "calories":"160", "list":"today", "completed":False},
+        {"time":0.0, "food":"Apple", "amount":"1", "calories":52,"list":"today", "completed":False},
+        {"time":0.5, "food":"Grilled Chicken", "amount":"3 ounces", "calories":160, "list":"today", "completed":False},
     ]) 
