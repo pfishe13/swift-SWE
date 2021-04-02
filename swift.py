@@ -181,7 +181,7 @@ def create_meal():
     try:
         data = request.json
         for key in data.keys():
-            assert key in ["food", "amount", "calories", "list"], f"Illegal key '{key}'"
+            assert key in ["food", "amount", calories, "list"], f"Illegal key '{key}'"
         assert type(data['food']) is str, "Food is not a string."
         assert len(data['food'].strip()) > 0, "Food is length zero."
         assert type(data['amount']) is str, "Amount is not a string."
