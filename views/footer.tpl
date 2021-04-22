@@ -6,7 +6,6 @@
 #footer { 
  bottom: 0;
  position: fixed;
- width: 750px;
  left: 0;
  right: 0;
 }
