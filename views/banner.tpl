@@ -51,7 +51,7 @@ button {
 <div id="main">
 <div class="div-banner">
     <button id="openNav" class="w3-button w3-margin w3-xxxlarge w3-round-large " onclick="w3_open()">&#8962;</button>
-    <img style="background-color:white;" src="https://user-images.githubusercontent.com/76025363/110568108-84b01180-8120-11eb-95ad-265a8e3bc052.png" width="275" height="147">
+    <img src="https://github.com/moha-ali001/software-engineering-proj/blob/main/views/swift_logo_v1.png?raw=true" width="275" height="147">
     <!-- <span class="w3-xxxlarge " style="font: Arial; color:#ffffff ; text-align:left;"><b>Taskbook</b><span> -->
 </div>
 <script>
