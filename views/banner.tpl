@@ -1,36 +1,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
   <style>
-    body {
-      background-color: #E7E7E7;
-      font-family: 'Roboto';
-    }
-    
-    body.dark {
-      background-color: #0B3142;
-      color: #e6e6e6;
-      font-family: 'Roboto';
-    }
-    
-    button {class="w3-large w3-button w3-margin w3-round-large w3-blue"}
-    
-    body.dark button {background-color: #0B3142; color: white}
-    
-    button{
-      display: inline-block;
-      margin: 0;
-    }
-
-.post img {
-  background: transparent;
+    body {background-color: white}
+    body.dark {background-color: #222; color: #e6e6e6}
+    button {class="w3-large w3-button w3-margin w3-round-large w3-blue}
+    body.dark button {background-color: #222; color: white}
+     button{
+  display: inline-block;
+  margin: 0;
 }
-
-.div-banner { background-color: #061A23 }
-
-</style>
+  </style>
 </head>
 <body>
 <div  class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-top " style="display:none" id="mySidebar">
@@ -45,8 +26,8 @@
     <button id="darkbutton"  class="w3-large w3-button w3-margin w3-round-large w3-blue ">Dark Mode</button>
 </div>
 <div id="main">
-<div class="div-banner">
-    <button id="openNav" class="w3-button w3-xxxlarge w3-round-large " onclick="w3_open()">&#8962;</button>
+<div class="w3-container  w3-black">
+    <button id="openNav" class="w3-button w3-xxxlarge w3-black w3-round-large " onclick="w3_open()">&#8962;</button>
     <img src="https://user-images.githubusercontent.com/76025363/110568108-84b01180-8120-11eb-95ad-265a8e3bc052.png" width="275" height="147">
     <!-- <span class="w3-xxxlarge " style="font: Arial; color:#ffffff ; text-align:left;"><b>Taskbook</b><span> -->
      <span class="w3-right" id="clockbox"  style="font:20pt Arial; color:#ffffff ; text-align:right;">
