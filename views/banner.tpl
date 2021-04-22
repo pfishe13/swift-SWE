@@ -30,7 +30,7 @@ button {
   margin: 0;
 }
 
-.div-banner { background-color: #061A23 }
+.div-banner { background-color: #1b1b2a }
 
 </style>
 </head>
