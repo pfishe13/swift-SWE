@@ -14,8 +14,7 @@
 
 .div-banner { background-color: #061A23 }
 
-.logo { background: "transparent"; }
-  </style>
+</style>
 </head>
 <body>
 <div  class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-top " style="display:none" id="mySidebar">
@@ -32,7 +31,7 @@
 <div id="main">
 <div class="div-banner">
     <button id="openNav" class="w3-button w3-xxxlarge w3-round-large " onclick="w3_open()">&#8962;</button>
-    <img class="logo" src="https://user-images.githubusercontent.com/76025363/110568108-84b01180-8120-11eb-95ad-265a8e3bc052.png" width="275" height="147" >
+    <img src="https://user-images.githubusercontent.com/76025363/110568108-84b01180-8120-11eb-95ad-265a8e3bc052.png" width="275" height="147" style="background:transparent">
     <!-- <span class="w3-xxxlarge " style="font: Arial; color:#ffffff ; text-align:left;"><b>Taskbook</b><span> -->
      <span class="w3-right" id="clockbox"  style="font:20pt Arial; color:#ffffff ; text-align:right;">
 <script type="text/javascript">
