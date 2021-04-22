@@ -2,24 +2,18 @@
 <html lang="en">
 <head>
 <style>
-        #footer {
-            position: fixed;
-            padding: 10px 10px 0px 10px;
-            bottom: 0;
-            width: 100%;
-            /* Height of the footer*/ 
-            height: 40px;
-            background: grey;
-        }
+
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+
 </style>
 </head>
 
-<body>
-<center>
-<div id="footer>
-<p> Test </p>
+<div>
+<footer>Testing</footer>
 </div>
-</center>
-</body>
 
 </html>
