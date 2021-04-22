@@ -8,12 +8,13 @@
  position: fixed;
  left: 0;
  right: 0;
+ margin: 25px 200px 25px;
 }
 </style>
 </head>
 
 <div class="w3-row">
-  <div id="footer" class="w3-panel w3-card-4 w3-round-xlarge" style="background-color:#1b1b2a; color:#b1b7ba; margin: 25px;">
+  <div id="footer" class="w3-panel w3-card-4 w3-round-xlarge" style="background-color:#1b1b2a; color:#b1b7ba;">
     <div>
       <h1><i><span id="clockbox"  style="font:20pt; color:#b1b7ba ;"></i></h1>
 <script type="text/javascript">
