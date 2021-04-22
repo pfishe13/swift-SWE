@@ -6,7 +6,7 @@
 #footer {
  position: fixed;
  bottom: 0;
- width: 100%;
+ width: 75%;
  background: #1b1b2a;
  color: white;
 }
