@@ -4,6 +4,7 @@
 <style>
 
 #footer {
+ margin: 0 auto;
  position: absolute;
  bottom: 0;
  background: #1b1b2a;
