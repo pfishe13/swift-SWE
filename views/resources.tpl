@@ -10,7 +10,7 @@
   font-size: 15px;
 }
 .active, .collapsible:hover {
-  background-color: black;
+  background-color: #1b1b2a;
   cursor: pointer;
   color: white;
 }
@@ -28,7 +28,7 @@ a:link{
   text-decoration: none;
 }
 a:hover{
-    color: blue;
+    color: #0ea3ff;
     cursor: pointer;
 }
 </style>
