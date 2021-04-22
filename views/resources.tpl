@@ -19,6 +19,7 @@
   padding-bottom: 30px;
   display: none;
   overflow: hidden;
+  margin: 16px;
 }
 div.resources {
     text-indent: 50px;
