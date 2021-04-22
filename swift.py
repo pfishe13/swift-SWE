@@ -163,9 +163,6 @@ def delete_task():
     response.headers['Content-Type'] = 'application/json'
     return json.dumps({'success': True})
 
-
-
-
 @get('/api/meals')
 def get_meals():
     'return a list of meals sorted by submit/modify time'
