@@ -5,6 +5,7 @@
 <style>
 #footer { 
  bottom: 0;
+ position: fixed;
 }
 </style>
 </head>
