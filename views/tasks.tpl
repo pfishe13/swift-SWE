@@ -12,7 +12,7 @@
 </style>
 
 <div class="w3-row">
-  <div class="w3-col s6 w3-container" style="color:#1b1b2a; border-radius:15px;">
+  <div class="w3-col s6 w3-container">
     <div class="w3-row w3-xxlarge w3-bottombar w3-border-black w3-margin-bottom">
       <h1><i>Workout</i></h1>
     </div>
