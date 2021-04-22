@@ -11,6 +11,8 @@
   display: inline-block;
   margin: 0;
 }
+
+.div-banner { background color: #061A23 }
   </style>
 </head>
 <body>
@@ -26,7 +28,7 @@
     <button id="darkbutton"  class="w3-large w3-button w3-margin w3-round-large w3-blue ">Dark Mode</button>
 </div>
 <div id="main">
-<div class="w3-container  w3-black">
+<div class="div-banner">
     <button id="openNav" class="w3-button w3-xxxlarge w3-black w3-round-large " onclick="w3_open()">&#8962;</button>
     <img src="https://user-images.githubusercontent.com/76025363/110568108-84b01180-8120-11eb-95ad-265a8e3bc052.png" width="275" height="147">
     <!-- <span class="w3-xxxlarge " style="font: Arial; color:#ffffff ; text-align:left;"><b>Taskbook</b><span> -->
