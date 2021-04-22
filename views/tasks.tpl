@@ -241,7 +241,7 @@ function display_task(x) {
         '      </span>' + 
         '  </td>' +
         '  <td>' +
-        '    <span id="edit_task-'+x.id+'" class="edit_task '+x.list+' material-icons" style="color:#666670;">edit</span>' +
+        '    <span id="edit_task-'+x.id+'" class="edit_task '+x.list+' material-icons" style="color:#0ea3ff;">edit</span>' +
         '    <span id="delete_task-'+x.id+'" class="delete_task material-icons" style="color:#fc1f5d;">delete</span>' +
         '    <span id="save_edit-'+x.id+'" hidden class="save_edit material-icons" style="color:#00d764;">done</span>' + 
         '    <span id="undo_edit-'+x.id+'" hidden class="undo_edit material-icons" style="color:#fc1f5d;">cancel</span>' +
