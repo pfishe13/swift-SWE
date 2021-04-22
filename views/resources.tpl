@@ -19,7 +19,6 @@
   padding-bottom: 30px;
   display: none;
   overflow: hidden;
-  margin: 16px;
 }
 div.resources {
     text-indent: 50px;
@@ -34,8 +33,8 @@ a:hover{
 }
 </style>
 <div class="resources">
-<h2>Resource Catagories:</h2>
-</div">
+<h1><i>Resource Catagories:</i></h1>
+</div>
 <button type="button" class="collapsible">Shoulder</button>
 <div class="content">
   <p><a href="https://youtu.be/rL6b6LDJK5w"> Lateral Raise </a> </p>
