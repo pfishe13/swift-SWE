@@ -9,6 +9,7 @@
  width: 75%;
  background: #1b1b2a;
  color: white;
+ text-align: center;
 }
 
 </style>
