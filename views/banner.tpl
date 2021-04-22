@@ -14,7 +14,7 @@
 
 .div-banner { background-color: #061A23 }
 
-.logo { background-color: "transparent"; }
+.logo { background: "transparent"; }
   </style>
 </head>
 <body>
