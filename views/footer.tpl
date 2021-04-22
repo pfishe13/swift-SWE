@@ -5,6 +5,7 @@
 
 #footer { 
  position: absolute;
+ width: 100px;
  bottom: 0;
  background: #1b1b2a;
  color: white;
