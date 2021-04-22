@@ -14,6 +14,6 @@
 </style>
 </head>
 
-<div id="footer" class="w3-panel w3-card-4 w3-round-xlarge">Testing</div>
+<div id="footer" class="w3-panel w3-card-4 w3-round-xlarge" style="margin: 25px;">Testing</div>
 
 </html>
