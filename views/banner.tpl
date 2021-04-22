@@ -15,9 +15,9 @@
 .div-banner { background-color: #061A23 }
 
 .logo {
-  width="275";
-  height="147";
-  background-color="transparent";
+  width: "275";
+  height: "147";
+  background-color: "transparent";
   }
   </style>
 </head>
