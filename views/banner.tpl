@@ -35,7 +35,7 @@ button {
 </style>
 </head>
 <body>
-<div  class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-top " style="display:none" id="mySidebar">
+<div  class="w3-sidebar w3-bar-block w3-card w3-animate-top " style="display:none color:#1b1b2a" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large"
   onclick="w3_close()">Close &times;</button>
     <a href="/overview"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Overview</span></a>
