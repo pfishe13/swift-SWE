@@ -7,8 +7,6 @@
  bottom: 0;
  position: fixed;
  width: 500px;
- height: 200px;
- margin: 5% auto;
  left: 0;
  right: 0;
 }
