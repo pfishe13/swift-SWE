@@ -18,7 +18,7 @@
     </div>
     <table id="task-list-today" class="w3-table">
     </table>
-    <div class="w3-row w3-bottombar w3-border-black w3-margin-bottom w3-margin-top"></div>
+    <div class="w3-row w3-bottombar w3-border-theme-dark-blue w3-margin-bottom w3-margin-top"></div>
   </div>
 </div>
 <input id="current_input" hidden value=""/> 
