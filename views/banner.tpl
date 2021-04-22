@@ -1,13 +1,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
-  <style>
-    body {background-color: white}
-    body.dark {background-color: #222; color: #e6e6e6}
-    button {class="w3-large w3-button w3-margin w3-round-large w3-blue}
-    body.dark button {background-color: #222; color: white}
-     button{
+  
+<style>
+body {
+  background-color: #E7E7E7;
+  font-family: 'Roboto';
+}
+
+body.dark {
+  background-color: #14141F;
+  color: #e6e6e6
+  font-family: 'Roboto';
+}
+
+button {
+  class="w3-large w3-button w3-margin w3-round-large w3-blue 
+}
+
+body.dark button {
+  background-color: #14141F;
+  color: white
+}
+
+button {
   display: inline-block;
   margin: 0;
 }
