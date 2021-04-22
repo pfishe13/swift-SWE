@@ -4,9 +4,9 @@
 <style>
 
 #footer {
- position: fixed;
+ position: relative;
  bottom: 0;
- width: 75%;
+ width: 50%;
  background: #1b1b2a;
  color: white;
  text-align: center;
