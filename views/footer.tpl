@@ -16,7 +16,9 @@
 
 <body>
 <center>
-<div id="footer>Testing</div>
+<div id="footer>
+<p> Test </p>
+</div>
 </center>
 </body>
 
