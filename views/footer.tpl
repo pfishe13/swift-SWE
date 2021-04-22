@@ -3,14 +3,12 @@
 <head>
 <style>
 
-#footer {
- margin: 0 auto;
+#footer { 
  position: absolute;
  bottom: 0;
  background: #1b1b2a;
  color: white;
  text-align: center;
- justify-content: center;
 }
 
 </style>
