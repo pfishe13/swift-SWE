@@ -32,7 +32,7 @@ button {
 
 .div-banner { background-color: #1b1b2a }
 
-.w3-theme-dark-blue {color:#fff !important; background-color:#14141f !important}
+.w3-border-theme-dark-blue {border-color:#14141f !important}
 
 </style>
 </head>
