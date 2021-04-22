@@ -53,27 +53,6 @@ button {
     <button id="openNav" class="w3-button w3-margin w3-xxxlarge w3-round-large " onclick="w3_open()">&#8962;</button>
     <img src="https://user-images.githubusercontent.com/76025363/110568108-84b01180-8120-11eb-95ad-265a8e3bc052.png" width="275" height="147">
     <!-- <span class="w3-xxxlarge " style="font: Arial; color:#ffffff ; text-align:left;"><b>Taskbook</b><span> -->
-     <span class="w3-right" id="clockbox"  style="font:20pt Arial; color:#b1b7ba ; text-align:right;">
-<script type="text/javascript">
-var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
-function GetClock(){
-var d=new Date();
-var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getFullYear();
-var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds(),ap;
-if(nhour==0){ap=" AM";nhour=12;}
-else if(nhour<12){ap=" AM";}
-else if(nhour==12){ap=" PM";}
-else if(nhour>12){ap=" PM";nhour-=12;}
-if(nmin<=9) nmin="0"+nmin;
-if(nsec<=9) nsec="0"+nsec;
-var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
-document.getElementById("clockbox").innerHTML=clocktext;
-}
-GetClock();
-setInterval(GetClock,1000);
-</script>
-  </span>
 </div>
 <script>
 function w3_open() {
