@@ -13,7 +13,7 @@
 
 <div class="w3-row">
   <div class="w3-panel w3-card-4 w3-round-xlarge" style="background-color:#1b1b2a; color:#b1b7ba; margin: 25px;">
-    <div class="w3-row w3-xxlarge w3-bottombar w3-margin-bottom" style="color:#14141F;">
+    <div class="w3-row w3-xxlarge w3-bottombar w3-theme-dark-blue w3-margin-bottom">
       <h1><i>Workout</i></h1>
     </div>
     <table id="task-list-today" class="w3-table">
