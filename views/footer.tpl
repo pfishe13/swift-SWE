@@ -4,7 +4,7 @@
 <style>
 
 #footer {
- position: relative;
+ position: absolute;
  bottom: 0;
  width: 50%;
  background: #1b1b2a;
