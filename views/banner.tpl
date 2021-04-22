@@ -1,18 +1,9 @@
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type = "text/css" href="style.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
-  <style>
-    body {background-color: white}
-    body.dark {background-color: #222; color: #e6e6e6}
-    button {class="w3-large w3-button w3-margin w3-round-large w3-blue}
-    body.dark button {background-color: #222; color: white}
-     button{
-  display: inline-block;
-  margin: 0;
-}
-  </style>
 </head>
 <body>
 <div  class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-top " style="display:none" id="mySidebar">
