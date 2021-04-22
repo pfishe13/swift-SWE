@@ -40,7 +40,7 @@ button {
 <div  class="w3-sidebar w3-bar-block w3-card w3-animate-top " style="display:none;" id="mySidebar">
   <button class="w3-bar-item w3-button w3-large"
   onclick="w3_close()">Close &times;</button>
-    <div style="color:#666670;">
+    <div style="background-color:#666670;">
     <a href="/overview"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Overview</span></a>
     <a href="/tasks"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Schedule</span></a>
     <a href="/meals"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Meals</span></a>
