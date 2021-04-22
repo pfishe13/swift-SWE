@@ -8,7 +8,6 @@
  bottom: 0;
  background: #1b1b2a;
  color: white;
- text-align: center;
 }
 
 </style>
