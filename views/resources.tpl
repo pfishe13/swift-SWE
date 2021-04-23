@@ -38,7 +38,7 @@ a:hover{
 <div class="w3-row">
   <div class="w3-panel w3-card-4 w3-round-xlarge" style="background-color:#1b1b2a; color:#b1b7ba; margin: auto; width:800px">
     <div class="w3-row w3-xxlarge w3-bottombar w3-border-theme-dark-blue w3-margin-bottom">
-      <h1><i>Resource Catagories:</i></h1>
+      <h1><i>Exercise Resources</i></h1>
     </div>
 <button type="button" class="collapsible">Shoulder</button>
 <div class="content">
