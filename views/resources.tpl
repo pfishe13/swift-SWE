@@ -110,6 +110,8 @@ a:hover{
 <br>
 <br>
 <br>
+<br>
+<br>
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
