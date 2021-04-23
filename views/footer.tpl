@@ -8,7 +8,7 @@
  position: fixed;
  left: 0;
  right: 0;
- margin: 25px 600px 25px;
+ margin: auto;
 }
 </style>
 </head>
