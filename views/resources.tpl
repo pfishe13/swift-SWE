@@ -103,6 +103,7 @@ a:hover{
   <p><a href="https://youtu.be/lTTi8pVRteo"> Calf Raise </a> </p>
   <p><a href="https://youtu.be/OgDxMvKDiZY"> Hip Thrust </a> </p>
 </div>
+</div>
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
