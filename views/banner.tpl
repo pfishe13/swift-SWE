@@ -6,7 +6,7 @@
   
 <style>
 body {
-  background-color: #DEE4E7;
+  background-color: #c7cad1;
   font-family: 'Roboto';
 }
 
