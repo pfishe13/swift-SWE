@@ -8,9 +8,11 @@
  position: fixed;
  left: 0;
  right: 0;
- margin: auto;
+ margin-top: auto;
+ margin-bottom: 25px;
+ margin-right: auto;
+ margin-left: auto;
  width: 800px;
- bottom-border; 25px;
 }
 </style>
 </head>
