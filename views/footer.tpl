@@ -42,6 +42,6 @@ setInterval(GetClock,1000);
   </div>
 </div>
 
-
+<div class="w3-row w3-xxlarge w3-bottombar w3-border-theme-dark-blue w3-margin-bottom"></div>
 
 </html>
