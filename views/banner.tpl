@@ -50,7 +50,7 @@ button {
 </div>
 <div id="main">
 <div class="div-banner">
-    <button id="openNav" class="w3-button w3-margin w3-xxxlarge w3-round-large " onclick="w3_open()">&#8962;</button>
+    <button id="openNav" class="w3-button w3-margin w3-xxxlarge w3-round-large w3-hover-black" onclick="w3_open()">&#8962;</button>
     <img src="https://github.com/moha-ali001/software-engineering-proj/blob/main/views/swift_logo_v1.png?raw=true" width="275" height="147">
     <!-- <span class="w3-xxxlarge " style="font: Arial; color:#ffffff ; text-align:left;"><b>Taskbook</b><span> -->
 </div>
