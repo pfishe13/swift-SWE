@@ -28,6 +28,7 @@ body.dark button {
 button {
   display: inline-block;
   margin: 0;
+  background-color: #14141F;
 }
 
 .div-banner { background-color: #1b1b2a }
