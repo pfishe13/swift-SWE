@@ -18,12 +18,13 @@ body.dark {
 
 body.dark button {
   background-color: #14141F;
-  color: white
+  color: white;
 }
 
 button {
   display: inline-block;
   margin: 0;
+  color: white;
 }
 
 .div-banner { background-color: #1b1b2a }
