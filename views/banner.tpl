@@ -16,10 +16,6 @@ body.dark {
   font-family: 'Roboto';
 }
 
-button {
-  class="w3-large w3-button w3-margin w3-round-large w3-blue 
-}
-
 body.dark button {
   background-color: #14141F;
   color: white
@@ -28,7 +24,6 @@ body.dark button {
 button {
   display: inline-block;
   margin: 0;
-  background-color: #14141F;
 }
 
 .div-banner { background-color: #1b1b2a }
