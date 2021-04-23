@@ -10,6 +10,10 @@ body {
   font-family: 'Roboto';
 }
 
+button {
+  class="w3-large w3-button w3-margin w3-round-large w3-blue" 
+}
+
 body.dark {
   background-color: #14141F;
   color: #e6e6e6
