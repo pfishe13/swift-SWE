@@ -9,6 +9,7 @@
  left: 0;
  right: 0;
  margin: auto;
+ width: 500px;
 }
 </style>
 </head>
@@ -41,7 +42,5 @@ setInterval(GetClock,1000);
     </div>
   </div>
 </div>
-
-<div class="w3-row w3-xxlarge w3-bottombar w3-border-theme-dark-blue w3-margin-bottom"></div>
 
 </html>
