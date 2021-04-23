@@ -9,7 +9,7 @@
  left: 0;
  right: 0;
  margin: auto;
- width: 500px;
+ width: 800px;
 }
 </style>
 </head>
