@@ -107,6 +107,7 @@ a:hover{
 </div>
 <div class="w3-row w3-bottombar w3-border-theme-dark-blue w3-margin-bottom w3-margin-top"></div>
 </div>
+<div class="w3-row w3-xxlarge w3-bottombar w3-border-theme-dark-blue w3-margin-bottom" style="height=100px" ></div>
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
