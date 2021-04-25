@@ -498,3 +498,4 @@ $(document).ready(function() {
   get_current_meals()
 });
 </script>
+% include("footer.tpl")
