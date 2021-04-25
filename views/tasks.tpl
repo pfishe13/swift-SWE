@@ -203,14 +203,14 @@ function display_task(x) {
   if ((x.id == "today") | (x.id == "tomorrow")) {
     t = '<tr id="task-'+x.id+'" class="task">' +
         '  <td style="width:36px"></td>' +  
-        '  <td style="width:108px"><span id="set_editor-'+x.id+'">' + 
+        '  <td style="width:90px"><span id="set_editor-'+x.id+'">' + 
         '        <input id="set_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="# of Sets..."/>'+
+        '          type="text" autofocus placeholder="# of Sets"/>'+
         '      </span>' + 
         '  </td>' +
-        '  <td style="width:108px"><span id="rep_editor-'+x.id+'">' + 
+        '  <td style="width:90px"><span id="rep_editor-'+x.id+'">' + 
         '        <input id="rep_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
-        '          type="text" autofocus placeholder="# of Reps..."/>'+
+        '          type="text" autofocus placeholder="# of Reps"/>'+
         '      </span>' + 
         '  </td>' +
         '  <td><span id="editor-'+x.id+'">' + 
