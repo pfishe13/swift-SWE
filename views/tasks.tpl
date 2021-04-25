@@ -208,7 +208,7 @@ function display_task(x) {
         '          type="text" autofocus placeholder="# of Sets..."/>'+
         '      </span>' + 
         '  </td>' +
-        '  <td style="width:108px><span id="rep_editor-'+x.id+'">' + 
+        '  <td style="width:108px"><span id="rep_editor-'+x.id+'">' + 
         '        <input id="rep_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="# of Reps..."/>'+
         '      </span>' + 
