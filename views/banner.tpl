@@ -46,7 +46,7 @@ button {
     <a href="/resources"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Resources</span></a>
     <a href="/login"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">SignUp</span></a>
     <a href="/register"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Login</span></a>
-    <button id="darkbutton"  class="w3-large w3-button w3-margin w3-round-large w3-blue ">Dark Mode</button>
+    <button id="darkbutton"  style="height:43px" class="w3-large w3-button w3-margin w3-round-large w3-blue ">Dark Mode</button>
 </div>
 <div id="main">
 <div class="div-banner">
