@@ -12,7 +12,7 @@
  margin-bottom: 25px;
  margin-right: auto;
  margin-left: auto;
- width: 800px;
+ width: 700px;
 }
 </style>
 </head>
