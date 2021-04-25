@@ -10,10 +10,10 @@
  
 .calculator {
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 5px;
   position: absolute;
-  right: 20px;
-  width: 400px;
+  right: 15px;
+  width: 380px;
 }
  
 .output-screen {
