@@ -203,7 +203,7 @@ function display_task(x) {
   if ((x.id == "today") | (x.id == "tomorrow")) {
     t = '<tr id="task-'+x.id+'" class="task">' +
         '  <td style="width:36px"></td>' +  
-        '  <td><span id="set_editor-'+x.id+'">' + 
+        '  <td style="width:100px"><span id="set_editor-'+x.id+'">' + 
         '        <input id="set_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="# of Sets..."/>'+
         '      </span>' + 
