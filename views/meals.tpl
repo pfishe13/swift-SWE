@@ -12,7 +12,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   position: absolute;
-  right: 100px;
+  right: 50px;
   width: 400px;
 }
  
