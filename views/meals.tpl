@@ -88,7 +88,7 @@ button:hover {
 </style>
 
 <div class="calculator">
-<h1 style="text-align:center; color:#b1b7ba">Calories calculator</h1>
+<h1 style="text-align:center; color:#a1a7ab">Calculator</h1>
         <input type="text" class="output-screen" value="" disabled />
         
         <div class="display-keys">
