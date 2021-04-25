@@ -420,7 +420,7 @@ function display_meal(x) {
   if ((x.id == "today") | (x.id == "tomorrow")) {
     t = '<tr id="meal-'+x.id+'" class="meal">' +
         '  <td style="width:36px"></td>' +  
-        '  <td><span id="amount_editor-'+x.id+'">' + 
+        '  <td style="width:162px"><span id="amount_editor-'+x.id+'">' + 
         '        <input id="amount_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="Amount..."/>'+
         '      </span>' + 
@@ -430,7 +430,7 @@ function display_meal(x) {
         '          type="text" autofocus placeholder="Food..."/>'+
         '      </span>' + 
         '  </td>' +
-        '  <td><span id="calories_editor-'+x.id+'">' + 
+        '  <td style="width:162px"><span id="calories_editor-'+x.id+'">' + 
         '        <input id="calories_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="number" autofocus placeholder="# of Calories..."/>'+
         '      </span>' + 
