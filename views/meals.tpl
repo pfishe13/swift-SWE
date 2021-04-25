@@ -13,7 +13,7 @@
   border-radius: 5px;
   position: absolute;
   right: 8px;
-  width: 350px;
+  width: 330px;
 }
  
 .output-screen {
