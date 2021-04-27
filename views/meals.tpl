@@ -9,7 +9,7 @@
 }
  
 .calculator {
-  border: 1px solid #ccc;
+  border: 1px solid #1b1b2a;
   border-radius: 5px;
   position: absolute;
   right: 8px;
