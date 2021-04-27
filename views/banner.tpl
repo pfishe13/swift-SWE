@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
   <style>
-    body {background-color: white}
-    body.dark {background-color: #222; color: #e6e6e6}
-    button {class="w3-large w3-button w3-margin w3-round-large w3-blue}
+    body {background-color: #E7E7E7}
+    body.dark {background-color: #0B3142; color: #e6e6e6}
+    button {class="w3-large w3-button w3-margin w3-round-large w3-blue"}
     body.dark button {background-color: #222; color: white}
      button{
   display: inline-block;
