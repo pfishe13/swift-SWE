@@ -2,6 +2,82 @@
 % include("banner.tpl")
 
 <style>
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+ 
+.calculator {
+  border: 1px solid #1b1b2a;
+  border-radius: 5px;
+  position: absolute;
+  right: 8px;
+  width: 330px;
+}
+ 
+.output-screen {
+  width: 100%;
+  font-size: 5rem;
+  height: 80px;
+  border: none;
+  background-color: gray;
+  color: #fff;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+  
+}
+ 
+button {
+  height: 60px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #c4c4c4;
+  background-color: transparent;
+  font-size: 2rem;
+  color: #333;
+  background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
+  text-shadow: 0 1px rgba(255,255,255,.4);
+}
+ 
+button:hover {
+  background-color: #eaeaea;
+}
+ 
+.operator {
+  color: #337cac;
+}
+ 
+.clear-value {
+  background-color: green;
+  border-color: #b0353a;
+  color: #fff;
+}
+ 
+.clear-value:hover {
+  background-color: #f17377;
+}
+ 
+.calculate-value {
+  background-color: blue;
+  border-color: #337cac;
+  color: #fff;
+  height: 100%;
+  grid-area: 2 / 4 / 6 / 5;
+}
+ 
+.calculate-value:hover {
+  background-color: #4e9ed4;
+}
+ 
+.display-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
   .save_food_edit, .undo_food_edit, .move_meal, .amount, .calories, .food, .edit_meal, .delete_meal {
     cursor: pointer;
   }
@@ -11,18 +87,161 @@
   .calories { padding-left:8px }
 </style>
 
+<div class="calculator">
+<h1 style="text-align:center; color:#91979c"><i>Calculator</i></h1>
+        <input type="text" class="output-screen" value="" disabled />
+        
+        <div class="display-keys">
+          
+          <button  class="operator" value="+">+</button>
+          <button  class="operator" value="-">-</button>
+          <button  class="operator" value="*">&times;</button>
+          <button  class="operator" value="/">&divide;</button>
+      
+          <button  value="7">7</button>
+          <button  value="8">8</button>
+          <button  value="9">9</button>
+      
+      
+          <button  value="4">4</button>
+          <button  value="5">5</button>
+          <button  value="6">6</button>
+      
+      
+          <button  value="1">1</button>
+          <button  value="2">2</button>
+          <button  value="3">3</button>
+      
+      
+          <button  value="0">0</button>
+          <button  class="decimal" value=".">.</button>
+          <button  class="clear-value" value="clear-value">AC</button>
+      
+          <button  class="calculate-value operator" value="=">=</button>
+      
+        </div>
+      </div>
+
+<div class="w3-row w3-xxlarge w3-bottombar w3-border-theme-dark-blue w3-margin-bottom"></div>
+
 <div class="w3-row">
-  <div class="w3-col s6 w3-container w3-topbar w3-bottombar w3-leftbar w3-rightbar w3-border-white">
-    <div class="w3-row w3-xxlarge w3-bottombar w3-border-black w3-margin-bottom">
+  <div class="w3-panel w3-card-4 w3-round-xlarge" style="background-color:#1b1b2a; color:#b1b7ba; margin: auto; width:800px">
+    <div class="w3-row w3-xxlarge w3-bottombar w3-border-theme-dark-blue w3-margin-bottom">
       <h1><i>Meals</i></h1>
     </div>
     <table id="meal-list-today" class="w3-table">
     </table>
-    <div class="w3-row w3-bottombar w3-border-black w3-margin-bottom w3-margin-top"></div>
+    <div class="w3-row w3-bottombar w3-border-theme-dark-blue w3-margin-bottom w3-margin-top"></div>
   </div>
 </div>
 <input id="current_food_input" hidden value=""/> 
 <script>
+const calculator = {
+  outputValue: '0',
+  firstValue: null,
+  flagForSecondOperand: false,
+  operator: null,
+}; 
+ 
+function inputDigit(digit) {
+  const { outputValue, flagForSecondOperand } = calculator;
+ 
+  if (flagForSecondOperand === true) {
+    calculator.outputValue = digit;
+    calculator.flagForSecondOperand = false;
+  } else {
+    calculator.outputValue = outputValue === '0' ? digit : outputValue + digit;
+  }
+}
+ 
+function inputDecimal(dot) {
+  if (calculator.flagForSecondOperand === true) return;
+  
+  // If the `outputValue` does not contain a decimal point
+  if (!calculator.outputValue.includes(dot)) {
+    // Append the decimal point
+    calculator.outputValue += dot;
+  }
+}
+ 
+function handleOperator(nextOperator) {
+  const { firstValue, outputValue, operator } = calculator
+  const inputValue = parseFloat(outputValue);
+ 
+  if (operator && calculator.flagForSecondOperand)  {
+    calculator.operator = nextOperator;
+    return;
+  }
+ 
+  if (firstValue == null) {
+    calculator.firstValue = inputValue;
+  } else if (operator) {
+    const currentValue = firstValue || 0;
+    const result = performCalculation[operator](currentValue, inputValue);
+ 
+    calculator.outputValue = String(result);
+    calculator.firstValue = result;
+  }
+ 
+  calculator.flagForSecondOperand = true;
+  calculator.operator = nextOperator;
+}
+ 
+const performCalculation = {
+  '/': (firstValue, secondOperand) => (firstValue / secondOperand).toFixed(5),
+ 
+  '*': (firstValue, secondOperand) => firstValue * secondOperand,
+ 
+  '+': (firstValue, secondOperand) => firstValue + secondOperand,
+ 
+  '-': (firstValue, secondOperand) => firstValue - secondOperand,
+ 
+  '=': (firstValue, secondOperand) => secondOperand
+};
+ 
+function resetCalculator() {
+  calculator.outputValue = '0';
+  calculator.firstValue = null;
+  calculator.flagForSecondOperand = false;
+  calculator.operator = null;
+}
+ 
+function updateDisplay() {
+  const display = document.querySelector('.output-screen');
+  display.value = calculator.outputValue;
+}
+ 
+updateDisplay();
+ 
+const keys = document.querySelector('.display-keys');
+keys.addEventListener('click', (event) => {
+  const { target } = event;
+  if (!target.matches('button')) {
+    return;
+  }
+ 
+  if (target.classList.contains('operator')) {
+    handleOperator(target.value);
+    updateDisplay();
+    return;
+  }
+ 
+  if (target.classList.contains('decimal')) {
+    inputDecimal(target.value);
+    updateDisplay();
+    return;
+  }
+ 
+  if (target.classList.contains('clear-value')) {
+    resetCalculator();
+    updateDisplay();
+    return;
+  }
+ 
+  inputDigit(target.value);
+  updateDisplay();
+});
+ 
 /* API CALLS */
 function api_get_meals(success_function) {
   $.ajax({url:"api/meals", type:"GET", 
@@ -201,7 +420,7 @@ function display_meal(x) {
   if ((x.id == "today") | (x.id == "tomorrow")) {
     t = '<tr id="meal-'+x.id+'" class="meal">' +
         '  <td style="width:36px"></td>' +  
-        '  <td><span id="amount_editor-'+x.id+'">' + 
+        '  <td style="width:162px"><span id="amount_editor-'+x.id+'">' + 
         '        <input id="amount_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="text" autofocus placeholder="Amount..."/>'+
         '      </span>' + 
@@ -211,15 +430,15 @@ function display_meal(x) {
         '          type="text" autofocus placeholder="Food..."/>'+
         '      </span>' + 
         '  </td>' +
-        '  <td><span id="calories_editor-'+x.id+'">' + 
+        '  <td style="width:162px"><span id="calories_editor-'+x.id+'">' + 
         '        <input id="calories_input-'+x.id+'" style="height:22px" class="w3-input" '+ 
         '          type="number" autofocus placeholder="# of Calories..."/>'+
         '      </span>' + 
         '  </td>' +
         '  <td style="width:72px">' +
         '    <span id="filler-'+x.id+'" class="material-icons">more_horiz</span>' + 
-        '    <span id="save_food_edit-'+x.id+'" hidden class="save_food_edit material-icons">done</span>' + 
-        '    <span id="undo_food_edit-'+x.id+'" hidden class="undo_food_edit material-icons">cancel</span>' +
+        '    <span id="save_food_edit-'+x.id+'" hidden class="save_food_edit material-icons" style="color:#00d764;">done</span>' + 
+        '    <span id="undo_food_edit-'+x.id+'" hidden class="undo_food_edit material-icons" style="color:#fc1f5d;">cancel</span>' +
         '  </td>' +
         '</tr>';
   } else {
@@ -241,10 +460,10 @@ function display_meal(x) {
         '      </span>' + 
         '  </td>' +
         '  <td>' +
-        '    <span id="edit_meal-'+x.id+'" class="edit_meal '+x.list+' material-icons">edit</span>' +
-        '    <span id="delete_meal-'+x.id+'" class="delete_meal material-icons">delete</span>' +
-        '    <span id="save_food_edit-'+x.id+'" hidden class="save_food_edit material-icons">done</span>' + 
-        '    <span id="undo_food_edit-'+x.id+'" hidden class="undo_food_edit material-icons">cancel</span>' +
+        '    <span id="edit_meal-'+x.id+'" class="edit_meal '+x.list+' material-icons" style="color:#0ea3ff;">edit</span>' +
+        '    <span id="delete_meal-'+x.id+'" class="delete_meal material-icons" style="color:#fc1f5d;">delete</span>' +
+        '    <span id="save_food_edit-'+x.id+'" hidden class="save_food_edit material-icons" style="color:#00d764;">done</span>' + 
+        '    <span id="undo_food_edit-'+x.id+'" hidden class="undo_food_edit material-icons" style="color:#fc1f5d;">cancel</span>' +
         '  </td>' +
         '</tr>';
   }

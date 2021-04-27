@@ -10,7 +10,6 @@ if __name__ == "__main__":
         {"time":0.5, "sets":"4", "reps":"8", "description":"Incline Bench Press", "list":"today", "completed":False},
         {"time":0.3, "sets":"3", "reps":"15", "description":"Incline Chest Fly", "list":"tomorrow", "completed":False},
         {"time":0.7, "sets":"5", "reps":"10", "description":"Pushups", "list":"tomorrow", "completed":True}
-        {"time":0.7, "sets":"5", "reps":"10", "description":"Something", "list":"tomorrow", "completed":False}
     ]) 
     meal_table = taskbook_db.get_table('meal')
     meal_table.drop()
