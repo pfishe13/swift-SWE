@@ -16,7 +16,7 @@
 
             <input type="submit">
         </form>
+        <div class="w3-row w3-xxlarge w3-bottombar w3-border-theme-dark-blue w3-margin-bottom">
    </div>
-   <div class="w3-row w3-xxlarge w3-bottombar w3-border-theme-dark-blue w3-margin-bottom">
 </div>
 % include("footer.tpl")
