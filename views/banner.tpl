@@ -9,31 +9,27 @@ body {
   background-color: #d3d6de;
   font-family: 'Roboto';
 }
-
 button {
   class="w3-large w3-button w3-margin w3-round-large w3-blue" 
 }
-
 body.dark {
   background-color: #14141F;
   color: #e6e6e6
   font-family: 'Roboto';
 }
-
+body.dark label {
+  color : #e6e6e6;
+}
 body.dark button {
   background-color: #14141F;
   color: white;
 }
-
 button {
   display: inline-block;
   margin: 0;
 }
-
 .div-banner { background-color: #1b1b2a }
-
 .w3-border-theme-dark-blue {border-color:#14141f !important}
-
 </style>
 </head>
 <body>
@@ -41,7 +37,7 @@ button {
   <button class="w3-bar-item w3-button w3-large w3-text-white"
   onclick="w3_close()">Close &times;</button>
     <a href="/overview"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Overview</span></a>
-    <a href="/tasks"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Schedule</span></a>
+    <a href="/schedule"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Schedule</span></a>
     <a href="/meals"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Meals</span></a>
     <a href="/resources"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">Resources</span></a>
     <a href="/login"><span class="w3-large w3-button w3-margin w3-round-large w3-blue">SignUp</span></a>
@@ -49,11 +45,10 @@ button {
     <button id="darkbutton"  style="height:43px" class="w3-large w3-button w3-margin w3-round-large w3-blue ">Dark Mode</button>
 </div>
 <div id="main">
-<div class="div-banner">
+  <div class="div-banner">
     <button id="openNav" class="w3-button w3-margin w3-xxlarge w3-round-large w3-hover-green" onclick="w3_open()">&#8962;</button>
     <img src="https://github.com/moha-ali001/software-engineering-proj/blob/main/views/swift_logo_v1.png?raw=true" width="275" height="147">
-    <!-- <span class="w3-xxxlarge " style="font: Arial; color:#ffffff ; text-align:left;"><b>Taskbook</b><span> -->
-</div>
+  </div>
 <script>
 function w3_open() {
   document.getElementById("main").style.marginLeft = "25%";
