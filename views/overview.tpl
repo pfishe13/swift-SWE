@@ -6,7 +6,7 @@
 
 <div class="w3-row">
   <div class="w3-panel w3-card-4 w3-round-xlarge" style="background-color:#1b1b2a; color:#b1b7ba; margin: auto; width:800px">
-  <p>      </p><img src="https://github.com/moha-ali001/software-engineering-proj/blob/main/views/swift_logo_v1.png?raw=true" width="550" height="294">
+  <img src="https://github.com/moha-ali001/software-engineering-proj/blob/main/views/swift_logo_v1.png?raw=true" width="550" height="294">
   </div>
 </div>
 
