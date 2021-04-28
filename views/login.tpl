@@ -10,9 +10,9 @@
     </div>
         <form>
             <label for="uname">Username:</label><br>
-            <input type="text" id="uname" name="uname"><br>
+            <input type="text" id="uname" name="uname"><br><br>
             <label for="pword">Password:</label><br>
-            <input type="password" id="pword" name="pword">
+            <input type="password" id="pword" name="pword"><br>
 
             <input type="submit">
         </form>
