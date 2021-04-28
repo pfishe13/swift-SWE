@@ -14,5 +14,9 @@
   <p style="text-indent:25px">It is our belief that efficiency and productivity in one’s personal fitness is a key component in a healthy lifestyle. Because the SWEPT team understands the difficulties involved in managing an active lifestyle, we hope to alleviate that stress by providing a singular place to manage all your productivity needs. Furthermore, we hope to provide customers access to an ever-growing array of tools and features that will better satisfy and suit the needs of each individual customer.</p> 
   <p style="text-indent:25px">With SWIFT we want to create an application that allows users to plan their workouts and their meals in an easy-to-use interface. Our goal is to encourage users to plan their exercises ahead of time to minimize last minute changes in workouts, which can cause lack of motivation and careless training. Plan ahead, limit distractions, and show up ready to better yourself!</p>
 </div>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 % include("footer.tpl")
