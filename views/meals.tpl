@@ -134,6 +134,11 @@ button:hover {
     <div class="w3-row w3-bottombar w3-border-theme-dark-blue w3-margin-bottom w3-margin-top"></div>
   </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
 <input id="current_food_input" hidden value=""/> 
 <script>
 const calculator = {
